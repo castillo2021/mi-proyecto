@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800;900&display=swap');
+
+@import './components/general';
+
+$main-font-family:"Mochiy Pop One";
+$second-font-family:"Poppins";
+$wave-color:#58B35C;
+
+
+*{
+    font-family: $second-font-family;
+    overflow-x: hidden;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+  
+}
+
+
+
+
+.menu{
+    z-index: 999;
+    padding:20px 0px 20px 0px;
+    @include Flex($directionY:center);
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+
+}
+.menu__logo{
+   width: 200px;
+   color:$wave-color;
+   margin:0px 0px 0px 60px;
+}
+.menu__nav{
+    width: 100%
+}
+
+.menu__ul{
+    
+    @include Flex();
+    gap:20px;
+}
+
+.menu__a{
+  color:black;
+}
+
+.menu_phone{
+    display: none;
+}
+
+.presentation{
+    background-color: #FEFEFE;
+    @include Flex();
+}
+
+
+.presentation__info{
+padding: 0px 60px 0px 60px;
+@include Flex($direction:column,$directionX:center,$directionY:center);
+height: 100vh;
+width: 100%;
+}
+
+.info__title{
+  font-size: 30px;
+}
+
+.info__name{
+    margin: 20px 0px 20px 0px;
+    font-size: 50px;
+}
+
+.info__subtitle{
+    margin: 0px 0px 10px 0px;
+    color: $wave-color;
+}
+
+.presentation__image{
+    width: 100%;
+    position: relative;
+    @include Flex($directionX:flex-start);
+
+}
+
+.image__wave{
+    
+
+ width: 100%;
+  height: 100%;
+   position: relative;
+   top: 0;
+   right: 0;
+   left: 0;
+
+}
+
+.image__wave svg  {
+    
+    fill:$wave-color;
+    
+   height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+.image{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.image__img{
+  
+width: 450px;
+height: 90%;
+position: absolute;
+
+left: 50%;
+right: 0;
+bottom: 0;
+object-fit: cover;
+margin-left: -100px;
+
+
+
+}
+
+
+@include Responsive();
